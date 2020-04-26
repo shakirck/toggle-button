@@ -1,0 +1,47 @@
+.row{
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+}
+.switch {
+    position: relative;
+}
+
+input[type="checkbox"]{
+display: none
+}
+
+
+label{
+    position: absolute;
+    cursor: pointer;
+    width: 100px;
+    height: 40px;
+    border: 1px solid gray;
+    border-radius: 50px;
+    
+}
+
+label::before{
+    content: "";
+    position: absolute;
+
+    height: 40px;
+    width: 40px;
+    background-color: #828583;
+    border-radius: 50px;
+    transition: all .2s ease-in-out;
+    transform: scale(1.1);
+    border: none;
+
+}
+input:checked + label{
+    background-color: #2ecc71;
+    border: none;
+
+}
+input:checked +label:before{
+    transform: translateX(70px) scale(1.2);
+ 
+}
